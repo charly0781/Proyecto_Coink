@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Coink</string>
+    <string name="ar_tituloregsistro">LA ALCANCIA QUE SIEMPRE TE ACOMPAÑA</string>
+    <string name="ar_btregsistro">REGISTRATE</string>
+    <string name="inicio_celular">Para comenzar, por favor ingresa tu número celuar.</string>
+    <string name="ar_btingresa">INGRESA</string>
+    <string name="tv_numero">Numero Celular</string>
+    <string name="textFormatCelular">(XXX - XXXXXX)</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margen_izq">15dp</dimen>
+    <dimen name="margen_der">15dp</dimen>
+    <dimen name="margen_top">20dp</dimen>
+    <dimen name="margen_bott">20dp</dimen>
+    <dimen name="margen_izq_bot">50dp</dimen>
+    <dimen name="margen_der_bot">50dp</dimen>
+    <dimen name="margen_imagen_icono">250dp</dimen>
+</resources>

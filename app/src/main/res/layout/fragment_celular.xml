@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context=".CelularFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl_menu1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:visibility="visible">
+        <ImageView
+            android:id="@+id/iv_imagen"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="@dimen/margen_izq"
+            android:foregroundGravity="center"
+            android:src="@drawable/coink"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginEnd="24pt"
+            android:fontFamily="@font/average_sans"
+            android:textSize="10pt"
+            android:layout_centerInParent="true"
+            android:textAlignment="textStart"
+            android:textColor="@color/colortext"
+            android:layout_toEndOf="@id/iv_imagen"
+            android:text="@string/inicio_celular" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_menu1"
+        android:layout_marginTop="@dimen/margen_top">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margen_izq"
+            android:layout_marginRight="@dimen/margen_der"
+            android:visibility="visible"
+            card_view:cardCornerRadius="0dp"
+            card_view:cardElevation="4dp"
+            card_view:cardUseCompatPadding="true">
+
+            <TextView
+                android:id="@+id/tv_numeroCeluar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margen_izq"
+                android:layout_marginTop="@dimen/margen_top"
+                android:layout_marginRight="@dimen/margen_der"
+                android:layout_marginBottom="@dimen/margen_bott"
+                android:fontFamily="@font/average_sans"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="@color/colortext"
+                android:hint="@string/tv_numero"
+                android:inputType="number"
+                android:maxLength="15"
+                android:text="@string/textFormatCelular"
+                android:textAlignment="center" />
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgBusiness"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margen_imagen_icono"
+            android:layout_marginTop="300px"
+            android:src="@drawable/coink" />
+
+        <TextView
+            android:id="@+id/tvtituloregistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margen_izq"
+            android:layout_marginTop="@dimen/margen_top"
+            android:layout_marginEnd="@dimen/margen_der"
+            android:layout_marginBottom="@dimen/margen_bott"
+            android:fontFamily="@font/montserrat_alternates_bold"
+            android:text="@string/ar_tituloregsistro"
+            android:textAlignment="center"
+            android:textColor="@color/principal"
+            android:textSize="10pt"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/bt_registrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="@string/ar_btregsistro"
+            android:textColor="@color/secundario"
+            android:layout_marginStart="@dimen/margen_izq_bot"
+            android:layout_marginEnd="@dimen/margen_der_bot"
+            android:background="@drawable/borde_boton" />
+
+        <Button
+            android:id="@+id/bt_ingresa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_top"
+            android:text="@string/ar_btingresa"
+            android:textColor="@color/white"
+            android:layout_marginBottom="@dimen/margen_bott"
+            android:layout_marginStart="@dimen/margen_izq_bot"
+            android:layout_marginEnd="@dimen/margen_der_bot"
+            android:background="@drawable/borde_boton2"
+            android:layout_gravity="bottom" />
+    </LinearLayout>
+
+</LinearLayout>

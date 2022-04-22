@@ -6,5 +6,11 @@
     <string name="ar_btingresa">INGRESA</string>
     <string name="tv_numero">Numero Celular</string>
     <string name="textFormatCelular">(XXX - XXXXXX)</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textDatosTitulo">¿CUALES SON TUS DATOS?</string>
+    <string name="textDatos">Ahora necesitamos saber Algunos datos tuyos.</string>
+    <string name="tipoDoc">Tipo de documento</string>
+    <string name="numDoc">Número de documento</string>
+    <string name="fechaExp">Fecha de expedició del documento</string>
+    <string name="fechaNac">Fecha de Nacimiento</string>
+    <string name="numDocHit">1234567890</string>
 </resources>

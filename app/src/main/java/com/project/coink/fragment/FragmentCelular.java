@@ -1,4 +1,4 @@
-package com.project.coink;
+package com.project.coink.fragment;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.project.coink.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link CelularFragment#newInstance} factory method to
+ * Use the {@link FragmentCelular#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CelularFragment extends Fragment {
+public class FragmentCelular extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class CelularFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public CelularFragment() {
+    public FragmentCelular() {
         // Required empty public constructor
     }
 
@@ -37,8 +39,8 @@ public class CelularFragment extends Fragment {
      * @return A new instance of fragment CelularFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static CelularFragment newInstance(String param1, String param2) {
-        CelularFragment fragment = new CelularFragment();
+    public static FragmentCelular newInstance(String param1, String param2) {
+        FragmentCelular fragment = new FragmentCelular();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

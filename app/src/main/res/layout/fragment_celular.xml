@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    tools:context=".CelularFragment">
+    tools:context=".fragment.FragmentCelular">
 
     <RelativeLayout
         android:id="@+id/rl_menu1"
@@ -12,25 +12,30 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:visibility="visible">
-        <ImageView
-            android:id="@+id/iv_imagen"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginLeft="@dimen/margen_izq"
-            android:foregroundGravity="center"
-            android:src="@drawable/coink"/>
 
         <TextView
+            android:id="@+id/tv_titulo"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginEnd="24pt"
-            android:fontFamily="@font/average_sans"
-            android:textSize="10pt"
+            android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:textAlignment="textStart"
+            android:layout_marginEnd="24pt"
+            android:drawableLeft="@drawable/coink"
+            android:fontFamily="@font/average_sans"
+            android:gravity="center_vertical"
+            android:text="@string/inicio_celular"
             android:textColor="@color/colortext"
-            android:layout_toEndOf="@id/iv_imagen"
-            android:text="@string/inicio_celular" />
+            android:textSize="9pt" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margen_top"
+            android:layout_marginLeft="@dimen/margen_izq"
+            android:layout_marginRight="@dimen/margen_der"
+            android:background="@color/principal"
+            android:layout_below="@id/tv_titulo"/>
+
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -49,22 +54,24 @@
             card_view:cardElevation="4dp"
             card_view:cardUseCompatPadding="true">
 
-            <TextView
+
+
+            <EditText
                 android:id="@+id/tv_numeroCeluar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/margen_izq"
+                android:layout_marginStart="@dimen/margen_izq"
                 android:layout_marginTop="@dimen/margen_top"
-                android:layout_marginRight="@dimen/margen_der"
+                android:layout_marginEnd="@dimen/margen_der"
                 android:layout_marginBottom="@dimen/margen_bott"
                 android:fontFamily="@font/average_sans"
-                android:textSize="25dp"
+                android:textSize="25sp"
+                android:focusable="true"
                 android:textStyle="bold"
                 android:textColor="@color/colortext"
-                android:hint="@string/tv_numero"
+                android:hint="@string/textFormatCelular"
                 android:inputType="number"
                 android:maxLength="15"
-                android:text="@string/textFormatCelular"
                 android:textAlignment="center" />
 
         </androidx.cardview.widget.CardView>

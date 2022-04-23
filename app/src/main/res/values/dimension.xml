@@ -7,4 +7,8 @@
     <dimen name="margen_izq_bot">50dp</dimen>
     <dimen name="margen_der_bot">50dp</dimen>
     <dimen name="margen_imagen_icono">250dp</dimen>
+    <dimen name="margen_top_texto">15dp</dimen>
+    <dimen name="margen_top_boton">50dp</dimen>
+    <dimen name="margen_bienvenida">20dp</dimen>
+    <dimen name="imagenbienvendia">100dp</dimen>
 </resources>

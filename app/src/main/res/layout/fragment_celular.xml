@@ -54,10 +54,8 @@
             card_view:cardElevation="4dp"
             card_view:cardUseCompatPadding="true">
 
-
-
             <EditText
-                android:id="@+id/tv_numeroCeluar"
+                android:id="@+id/et_numeroCeluar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margen_izq"

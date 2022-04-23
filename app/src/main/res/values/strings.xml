@@ -7,10 +7,29 @@
     <string name="tv_numero">Numero Celular</string>
     <string name="textFormatCelular">(XXX - XXXXXX)</string>
     <string name="textDatosTitulo">¿CUALES SON TUS DATOS?</string>
+    <string name="textDatoscontrato">ESTAS MUY CERCA DE SER PARTE DE COINK.</string>
     <string name="textDatos">Ahora necesitamos saber Algunos datos tuyos.</string>
-    <string name="tipoDoc">Tipo de documento</string>
+    <string name="tipoDoc">Documento de identidad</string>
     <string name="numDoc">Número de documento</string>
     <string name="fechaExp">Fecha de expedició del documento</string>
     <string name="fechaNac">Fecha de Nacimiento</string>
+    <string name="Generp">Genero</string>
+    <string name="configurar_cta">Configura tu Cuenta</string>
+    <string name="correo">Correo electronico</string>
+    <string name="confirma_correo">Confirmar Correo electronico</string>
+    <string name="pinseguridad">PIN de seguridad</string>
+    <string name="pinconfirma">Confirmar PIN de seguridad</string>
     <string name="numDocHit">1234567890</string>
+    <string name="siguiente">SIGUIENTE</string>
+    <string name="continuar">CONTINUAR</string>
+
+    <string name="txcontrato">Solo es necesario que leas detenidamente el contrato que se encuentra al final de esta pantalla y lo aceptes.</string>
+    <string name="tituloContrato">LO MAS IMPORTANTE</string>
+
+    <string name="contrato">contrato referencia se va a leer desde archivo</string>
+    <string name="leeContrato">Lee tu contrato</string>
+    <string name="termycond">He leído ya acepto el contrato</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="titulo_ceunta">¡Bienvenido a Coink!</string>
+    <string name="subtitulo_cuenta">¡Cuenta creada exitosamente, tu marrano ya está listo para que empieces a ahorrar!</string>
 </resources>

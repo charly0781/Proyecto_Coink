@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.FragmentCelular">
 
     <RelativeLayout
@@ -19,20 +19,20 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margen_izq"
             android:src="@drawable/coink" />
+
         <TextView
             android:id="@+id/tv_titulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margen_izq"
             android:layout_marginEnd="@dimen/margen_der"
-            android:fontFamily="@font/average_sans"
-            android:textSize="10pt"
-            android:textAlignment="center"
-            android:textStyle="bold"
             android:layout_toEndOf="@id/iv_icono"
+            android:fontFamily="@font/average_sans"
+            android:text="@string/textDatosTitulo"
+            android:textAlignment="center"
             android:textColor="@color/colortext"
-            android:text="@string/textDatosTitulo"/>
-
+            android:textSize="10pt"
+            android:textStyle="bold" />
         <TextView
             android:id="@+id/tv_icono"
             android:layout_width="match_parent"
@@ -53,17 +53,19 @@
             android:id="@+id/vp_line"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginTop="@dimen/margen_top"
+            android:layout_below="@id/tv_icono"
             android:layout_marginStart="@dimen/margen_izq"
+            android:layout_marginTop="@dimen/margen_top"
             android:layout_marginEnd="@dimen/margen_der"
-            android:background="@color/principal"
-            android:layout_below="@id/tv_icono"/>
+            android:background="@color/principal" />
 
     </RelativeLayout>
+
     <androidx.core.widget.NestedScrollView
         android:id="@+id/ns_scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margen_bott"
         android:layout_below="@id/rl_menu1">
 
         <RelativeLayout
@@ -71,50 +73,162 @@
             android:layout_height="match_parent"
             android:layout_below="@id/rl_menu1"
             android:layout_marginStart="@dimen/margen_izq"
-            android:layout_marginEnd="@dimen/margen_der"
-            android:layout_marginTop="@dimen/margen_top">
+            android:layout_marginTop="@dimen/margen_top"
+            android:layout_marginEnd="@dimen/margen_der">
+
             <TextView
-                android:id="@+id/tv_tipoDoc"
+                android:id="@+id/tv_docIdentidad"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margen_izq"
+                android:layout_marginTop="@dimen/margen_top_texto"
                 android:layout_marginEnd="@dimen/margen_der"
                 android:fontFamily="@font/average_sans"
-                android:textSize="18sp"
-                android:text="@string/tipoDoc" />
+                android:text="@string/tipoDoc"
+                android:textAlignment="gravity"
+                android:textColor="@color/colortext"
+                android:textSize="10pt"
+                android:textStyle="bold" />
             <Spinner
                 android:id="@+id/sp_tipoDoc"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_centerVertical="true"
+                android:layout_below="@+id/tv_docIdentidad"
+                android:layout_marginTop="@dimen/margen_top_texto"
                 android:layout_marginStart="@dimen/margen_izq"
                 android:layout_marginEnd="@dimen/margen_der"
-                android:layout_below="@id/tv_tipoDoc"
-                android:gravity="center"
-                android:spinnerMode="dropdown" />
-            <TextView
-                android:id="@+id/tv_numDoc"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/margen_top"
-                android:layout_marginStart="@dimen/margen_izq"
-                android:layout_marginEnd="@dimen/margen_der"
-                android:fontFamily="@font/average_sans"
-                android:layout_below="@id/sp_tipoDoc"
-                android:textSize="18sp"
-                android:text="@string/numDoc" />
+                android:gravity="center" />
             <EditText
                 android:id="@+id/et_numDoc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/sp_tipoDoc"
                 android:layout_marginStart="@dimen/margen_izq"
                 android:layout_marginEnd="@dimen/margen_izq"
-                android:layout_below="@id/tv_numDoc"
-                android:textColor="@color/colortext"
-                android:hint="@string/numDocHit"
+                android:hint="@string/numDoc"
                 android:inputType="number"
                 android:maxLength="15"
-                android:textAlignment="viewStart"/>
+                android:textAlignment="viewStart"
+                android:textColor="@color/colortext" />
+            <EditText
+                android:id="@+id/et_fechaDoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_numDoc"
+                android:layout_marginTop="@dimen/margen_top_texto"
+                android:layout_marginStart="@dimen/margen_izq"
+                android:layout_marginEnd="@dimen/margen_izq"
+                android:hint="@string/fechaExp"
+                android:inputType="date"
+                android:maxLength="15"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colortext" />
+            <EditText
+                android:id="@+id/et_fechaNac"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_fechaDoc"
+                android:layout_marginTop="@dimen/margen_top_texto"
+                android:layout_marginStart="@dimen/margen_izq"
+                android:layout_marginEnd="@dimen/margen_izq"
+                android:hint="@string/fechaNac"
+                android:inputType="date"
+                android:maxLength="15"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colortext" />
+            <Spinner
+                android:id="@+id/sp_genero"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/et_fechaNac"
+                android:layout_marginTop="@dimen/margen_top_texto"
+                android:layout_marginStart="@dimen/margen_izq"
+                android:layout_marginEnd="@dimen/margen_der"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_configurar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sp_genero"
+                android:layout_marginStart="@dimen/margen_izq"
+                android:layout_marginTop="@dimen/margen_top_texto"
+                android:layout_marginEnd="@dimen/margen_der"
+                android:fontFamily="@font/average_sans"
+                android:text="@string/configurar_cta"
+                android:textAlignment="gravity"
+                android:textColor="@color/colortext"
+                android:textSize="10pt"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_correo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_configurar"
+                android:layout_marginStart="@dimen/margen_izq"
+                android:layout_marginTop="@dimen/margen_top_texto"
+                android:layout_marginEnd="@dimen/margen_izq"
+                android:hint="@string/correo"
+                android:inputType="date"
+                android:maxLength="15"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colortext" />
+            <EditText
+                android:id="@+id/et_correoconfirma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_correo"
+                android:layout_marginTop="@dimen/margen_top_texto"
+                android:layout_marginStart="@dimen/margen_izq"
+                android:layout_marginEnd="@dimen/margen_izq"
+                android:hint="@string/confirma_correo"
+                android:inputType="textEmailAddress"
+                android:maxLength="80"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colortext" />
+            <EditText
+                android:id="@+id/et_pin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_correoconfirma"
+                android:layout_marginTop="@dimen/margen_top_texto"
+                android:layout_marginStart="@dimen/margen_izq"
+                android:layout_marginEnd="@dimen/margen_izq"
+                android:hint="@string/pinseguridad"
+                android:inputType="numberPassword"
+                android:maxLength="@integer/correoSize"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colortext" />
+            <EditText
+                android:id="@+id/et_pinconfirma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_pin"
+                android:layout_marginTop="@dimen/margen_top_texto"
+                android:layout_marginStart="@dimen/margen_izq"
+                android:layout_marginEnd="@dimen/margen_izq"
+                android:hint="@string/pinconfirma"
+                android:inputType="numberPassword"
+                android:maxLength="@integer/correoSize"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colortext" />
+
+            <Button
+                android:id="@+id/bt_siguiente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_pinconfirma"
+                android:layout_marginTop="@dimen/margen_top_boton"
+                android:layout_marginStart="@dimen/margen_izq_bot"
+                android:layout_marginEnd="@dimen/margen_der_bot"
+                android:text="@string/siguiente"
+                android:textColor="@color/secundario"
+                android:textStyle="bold"
+                android:enabled="false"
+                android:layout_marginBottom="@dimen/margen_top_boton"
+                android:background="@drawable/borde_boton"
+                android:layout_gravity="center" />
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 

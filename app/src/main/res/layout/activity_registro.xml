@@ -54,14 +54,8 @@
                 android:layout_marginTop="@dimen/margen_top"
                 android:layout_marginBottom="@dimen/margen_bott"
                 android:clickable="false"
+                android:gravity="center"
                 android:orientation="horizontal">
-                <RadioGroup
-                    android:id="@+id/rb_group"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:clickable="false"
-                    android:orientation="horizontal">
                     <RadioButton
                         android:id="@+id/rbstepuno"
                         android:layout_width="wrap_content"
@@ -85,11 +79,9 @@
                         android:clickable="false"
                         android:backgroundTint="@color/principal"
                         android:layout_marginRight="40dp"/>
-                </RadioGroup>
+
             </LinearLayout>
         </LinearLayout>
-
-
 
     </androidx.cardview.widget.CardView>
 

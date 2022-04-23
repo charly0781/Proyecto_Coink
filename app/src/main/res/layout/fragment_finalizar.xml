@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.FragmentCelular">
+
+    <RelativeLayout
+        android:id="@+id/rl_menu1"
+        android:layout_width="match_parent"
+        android:layout_height="80pt"
+        android:layout_marginTop="@dimen/margen_bott"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_icono"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margen_izq"
+            android:src="@drawable/oinkpolicia2x" />
+
+        <TextView
+            android:id="@+id/tv_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margen_izq"
+            android:layout_marginEnd="@dimen/margen_der"
+            android:layout_toEndOf="@id/iv_icono"
+            android:fontFamily="@font/average_sans"
+            android:text="@string/textDatoscontrato"
+            android:textColor="@color/colortext"
+            android:textSize="10pt"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_icono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_titulo"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/margen_izq"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="@dimen/margen_der"
+            android:layout_toEndOf="@id/iv_icono"
+            android:fontFamily="@font/average_sans"
+            android:gravity="center_vertical"
+            android:text="@string/txcontrato"
+            android:textColor="@color/colortext"
+            android:textSize="8pt" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_icono"
+            android:layout_marginStart="@dimen/margen_izq"
+            android:layout_marginTop="@dimen/margen_top"
+            android:layout_marginEnd="@dimen/margen_der"
+            android:background="@color/principal" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ns_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margen_bott"
+        android:layout_below="@id/rl_menu1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rl_menu1"
+            android:layout_marginStart="@dimen/margen_izq"
+            android:layout_marginTop="@dimen/margen_top"
+            android:layout_marginEnd="@dimen/margen_der">
+
+            <TextView
+                android:id="@+id/tv_titulocontrato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margen_izq"
+                android:layout_marginTop="@dimen/margen_top_texto"
+                android:layout_marginEnd="@dimen/margen_der"
+                android:fontFamily="@font/average_sans"
+                android:text="@string/tituloContrato"
+                android:textAlignment="gravity"
+                android:textColor="@color/colortext"
+                android:textSize="9pt"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_resumencontrato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margen_izq"
+                android:layout_marginTop="@dimen/margen_top_texto"
+                android:layout_marginEnd="@dimen/margen_der"
+                android:layout_below="@id/tv_titulocontrato"
+                android:fontFamily="@font/average_sans"
+                android:text="@string/contrato"
+                android:textAlignment="gravity"
+                android:textColor="@color/colortext"
+                android:textSize="9pt"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_leecontrato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margen_izq"
+                android:layout_marginTop="@dimen/margen_top_texto"
+                android:layout_marginEnd="@dimen/margen_der"
+                android:layout_below="@id/tv_resumencontrato"
+                android:fontFamily="@font/average_sans"
+                android:text="@string/leeContrato"
+                android:textAlignment="gravity"
+                android:textColor="@color/colortext"
+                android:textSize="9pt"
+                android:autoLink="web"
+                android:textStyle="bold" />
+            <CheckBox
+                android:id="@+id/cb_acepto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margen_izq"
+                android:layout_marginTop="@dimen/margen_top_texto"
+                android:layout_marginEnd="@dimen/margen_der"
+                android:layout_below="@id/tv_leecontrato"
+                android:text="@string/termycond"/>
+
+            <Button
+                android:id="@+id/bt_siguiente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cb_acepto"
+                android:layout_marginTop="@dimen/margen_top_boton"
+                android:layout_marginStart="@dimen/margen_izq_bot"
+                android:layout_marginEnd="@dimen/margen_der_bot"
+                android:text="@string/siguiente"
+                android:textColor="@color/secundario"
+                android:textStyle="bold"
+                android:enabled="false"
+                android:layout_marginBottom="@dimen/margen_top_boton"
+                android:background="@drawable/borde_boton"
+                android:layout_gravity="center" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

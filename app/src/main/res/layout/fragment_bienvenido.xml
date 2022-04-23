@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@color/fondo">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        card_view:cardCornerRadius="0dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/margen_top_boton"
+        android:layout_marginEnd="@dimen/margen_top_boton"
+        card_view:cardElevation="4dp"
+        card_view:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        android:clickable="false"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/tv_imagen"
+            android:layout_width="@dimen/imagenbienvendia"
+            android:layout_height="@dimen/imagenbienvendia"
+            android:layout_marginStart="@dimen/margen_bienvenida"
+            android:layout_marginEnd="@dimen/margen_bienvenida"
+            android:layout_marginTop="@dimen/margen_bienvenida"
+            android:src="@drawable/marrano_regalo"/>
+
+        <TextView
+            android:id="@+id/tv_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margen_bienvenida"
+            android:layout_marginEnd="@dimen/margen_bienvenida"
+            android:layout_marginTop="@dimen/margen_bienvenida"
+            android:fontFamily="@font/montserrat_alternates_bold"
+            android:text="@string/titulo_ceunta"
+            android:textAlignment="center"
+            android:textColor="@color/secundario"
+            android:textSize="10pt"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_subtitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margen_bienvenida"
+            android:layout_marginTop="@dimen/margen_bienvenida"
+            android:layout_marginEnd="@dimen/margen_bienvenida"
+            android:fontFamily="@font/montserrat_alternates_thin"
+            android:text="@string/subtitulo_cuenta"
+            android:textAlignment="center"
+            android:textColor="@color/secundario"
+            android:textSize="8pt"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/bt_continuar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/margen_izq_bot"
+            android:layout_marginTop="@dimen/margen_top_boton"
+            android:layout_marginEnd="@dimen/margen_der_bot"
+            android:layout_marginBottom="@dimen/margen_top_boton"
+            android:background="@drawable/borde_boton"
+            android:text="@string/continuar"
+            android:textColor="@color/secundario" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

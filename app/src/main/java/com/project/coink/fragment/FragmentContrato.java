@@ -97,7 +97,6 @@ public class FragmentContrato extends Fragment implements Button.OnClickListener
                 break;
         }
 
-
     }
 
     private void validarContrato() {

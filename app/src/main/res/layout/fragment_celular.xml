@@ -6,11 +6,99 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.FragmentCelular">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        card_view:cardCornerRadius="0dp"
+        card_view:cardElevation="4dp"
+        android:clickable="false"
+        card_view:cardUseCompatPadding="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margen_top"
+                android:gravity="top"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="11pt"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margen_izq"
+                    android:background="@drawable/ic_stat_name"
+                    android:backgroundTint="@color/principal"
+                    android:textSize="15pt"/>
+
+                <TextView
+                    android:id="@+id/tv_tituloop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginRight="@dimen/margen_der"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/tv_numero"
+                    android:textAlignment="center"
+                    android:textSize="10pt"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/margen_izq"
+                android:layout_marginTop="@dimen/margen_top"
+                android:layout_marginBottom="@dimen/margen_bott"
+                android:clickable="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <RadioButton
+                    android:id="@+id/rbstepuno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:enabled="true"
+                    android:clickable="false"
+                    android:checked="true"
+                    android:backgroundTint="@color/principal"
+                    android:layout_marginStart="@dimen/margen_izq"
+                    android:layout_marginEnd="@dimen/margen_der"/>
+                <RadioButton
+                    android:id="@+id/rbstepdos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:checked="false"
+                    android:backgroundTint="@color/principal"
+                    android:layout_marginStart="@dimen/margen_izq"
+                    android:layout_marginEnd="@dimen/margen_der"/>
+                <RadioButton
+                    android:id="@+id/rbsteptres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:checked="false"
+                    android:backgroundTint="@color/principal"
+                    android:layout_marginStart="@dimen/margen_izq"
+                    android:layout_marginEnd="@dimen/margen_der"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
     <RelativeLayout
         android:id="@+id/rl_menu1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/margen_top"
         android:visibility="visible">
 
         <TextView
@@ -30,18 +118,18 @@
             android:id="@+id/vp_line"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginTop="@dimen/margen_top"
+            android:layout_below="@id/tv_titulo"
             android:layout_marginLeft="@dimen/margen_izq"
+            android:layout_marginTop="@dimen/margen_top"
             android:layout_marginRight="@dimen/margen_der"
-            android:background="@color/principal"
-            android:layout_below="@id/tv_titulo"/>
+            android:background="@color/principal" />
 
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/rl_menu1"
-        android:layout_marginTop="@dimen/margen_top">
+        android:layout_marginTop="@dimen/margen_top_contrato">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_info"
@@ -62,15 +150,15 @@
                 android:layout_marginTop="@dimen/margen_top"
                 android:layout_marginEnd="@dimen/margen_der"
                 android:layout_marginBottom="@dimen/margen_bott"
-                android:fontFamily="@font/average_sans"
-                android:textSize="25sp"
                 android:focusable="true"
-                android:textStyle="bold"
-                android:textColor="@color/colortext"
+                android:fontFamily="@font/average_sans"
                 android:hint="@string/textFormatCelular"
                 android:inputType="number"
-                android:maxLength="15"
-                android:textAlignment="center" />
+                android:maxLength="10"
+                android:textAlignment="center"
+                android:textColor="@color/colortext"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
 

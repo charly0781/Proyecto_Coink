@@ -4,13 +4,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".fragment.FragmentCelular">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            card_view:cardCornerRadius="0dp"
+            card_view:cardElevation="4dp"
+            android:clickable="false"
+            card_view:cardUseCompatPadding="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margen_top"
+                    android:gravity="top"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="11pt"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/margen_izq"
+                        android:background="@drawable/ic_stat_name"
+                        android:backgroundTint="@color/principal"
+                        android:textSize="15pt"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginRight="@dimen/margen_der"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/finalizar"
+                        android:textAlignment="center"
+                        android:textSize="10pt"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/margen_izq"
+                    android:layout_marginTop="@dimen/margen_top"
+                    android:layout_marginBottom="@dimen/margen_bott"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/rbstepuno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="true"
+                        android:clickable="false"
+                        android:checked="true"
+                        android:backgroundTint="@color/principal"
+                        android:layout_marginStart="@dimen/margen_izq"
+                        android:layout_marginEnd="@dimen/margen_der"/>
+                    <RadioButton
+                        android:id="@+id/rbstepdos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:checked="true"
+                        android:backgroundTint="@color/principal"
+                        android:layout_marginStart="@dimen/margen_izq"
+                        android:layout_marginEnd="@dimen/margen_der"/>
+                    <RadioButton
+                        android:id="@+id/rbsteptres"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:checked="true"
+                        android:backgroundTint="@color/principal"
+                        android:layout_marginStart="@dimen/margen_izq"
+                        android:layout_marginEnd="@dimen/margen_der"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/rl_menu1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/margen_top_contrato"
+        android:layout_below="@id/rl_titulo"
         android:visibility="visible">
 
         <ImageView
@@ -80,24 +170,41 @@
                 android:id="@+id/tv_docIdentidad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margen_izq"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="@dimen/margen_top_texto"
                 android:layout_marginEnd="@dimen/margen_der"
                 android:fontFamily="@font/average_sans"
                 android:text="@string/tipoDoc"
                 android:textAlignment="gravity"
                 android:textColor="@color/colortext"
-                android:textSize="10pt"
+                android:textSize="11pt"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_tpDocumento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_docIdentidad"
+                android:layout_marginStart="@dimen/margen_izq"
+                android:layout_marginTop="@dimen/margen_top_texto"
+                android:layout_marginEnd="@dimen/margen_der"
+                android:fontFamily="@font/average_sans"
+                android:text="@string/tipoDocIden"
+                android:textAlignment="gravity"
+                android:textColor="@color/colortext"
+                android:textSize="8pt"
+                android:textStyle="bold" />
+
             <Spinner
                 android:id="@+id/sp_tipoDoc"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/tv_docIdentidad"
-                android:layout_marginTop="@dimen/margen_top_texto"
+                android:layout_below="@+id/tv_tpDocumento"
                 android:layout_marginStart="@dimen/margen_izq"
+                android:layout_marginTop="@dimen/margen_top_texto"
                 android:layout_marginEnd="@dimen/margen_der"
                 android:gravity="center" />
+
             <EditText
                 android:id="@+id/et_numDoc"
                 android:layout_width="match_parent"
@@ -110,14 +217,16 @@
                 android:maxLength="15"
                 android:textAlignment="viewStart"
                 android:textColor="@color/colortext" />
+
             <EditText
                 android:id="@+id/et_fechaDoc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/et_numDoc"
-                android:layout_marginTop="@dimen/margen_top_texto"
                 android:layout_marginStart="@dimen/margen_izq"
+                android:layout_marginTop="@dimen/margen_top_texto"
                 android:layout_marginEnd="@dimen/margen_izq"
+                android:focusable="false"
                 android:hint="@string/fechaExp"
                 android:inputType="date"
                 android:maxLength="15"
@@ -131,16 +240,32 @@
                 android:layout_marginTop="@dimen/margen_top_texto"
                 android:layout_marginStart="@dimen/margen_izq"
                 android:layout_marginEnd="@dimen/margen_izq"
+                android:focusable="false"
                 android:hint="@string/fechaNac"
                 android:inputType="date"
                 android:maxLength="15"
                 android:textAlignment="viewStart"
                 android:textColor="@color/colortext" />
+
+            <TextView
+                android:id="@+id/tv_genero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_fechaNac"
+                android:layout_marginStart="@dimen/margen_izq"
+                android:layout_marginTop="@dimen/margen_top_texto"
+                android:layout_marginEnd="@dimen/margen_der"
+                android:fontFamily="@font/average_sans"
+                android:text="@string/Genero"
+                android:textAlignment="gravity"
+                android:textColor="@color/colortext"
+                android:textSize="8pt"
+                android:textStyle="bold" />
             <Spinner
                 android:id="@+id/sp_genero"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/et_fechaNac"
+                android:layout_below="@+id/tv_genero"
                 android:layout_marginTop="@dimen/margen_top_texto"
                 android:layout_marginStart="@dimen/margen_izq"
                 android:layout_marginEnd="@dimen/margen_der"
@@ -170,7 +295,7 @@
                 android:layout_marginTop="@dimen/margen_top_texto"
                 android:layout_marginEnd="@dimen/margen_izq"
                 android:hint="@string/correo"
-                android:inputType="date"
+                android:inputType="textEmailAddress"
                 android:maxLength="15"
                 android:textAlignment="viewStart"
                 android:textColor="@color/colortext" />
@@ -225,7 +350,6 @@
                 android:text="@string/siguiente"
                 android:textColor="@color/secundario"
                 android:textStyle="bold"
-                android:enabled="false"
                 android:layout_marginBottom="@dimen/margen_top_boton"
                 android:background="@drawable/borde_boton"
                 android:layout_gravity="center" />

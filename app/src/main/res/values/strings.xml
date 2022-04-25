@@ -4,16 +4,19 @@
     <string name="ar_btregsistro">REGISTRATE</string>
     <string name="inicio_celular">Para comenzar, por favor ingresa tu número celuar.</string>
     <string name="ar_btingresa">INGRESA</string>
-    <string name="tv_numero">Numero Celular</string>
+    <string name="tv_numero">NÚMERO CELULAR</string>
     <string name="textFormatCelular">(XXX - XXXXXX)</string>
     <string name="textDatosTitulo">¿CUALES SON TUS DATOS?</string>
     <string name="textDatoscontrato">ESTAS MUY CERCA DE SER PARTE DE COINK.</string>
     <string name="textDatos">Ahora necesitamos saber Algunos datos tuyos.</string>
+    <string name="datoscuenta">DATOS DE CUENTA</string>
+    <string name="finalizar">FINALIZAR</string>
     <string name="tipoDoc">Documento de identidad</string>
+    <string name="tipoDocIden">Tipo de documento</string>
     <string name="numDoc">Número de documento</string>
     <string name="fechaExp">Fecha de expedició del documento</string>
     <string name="fechaNac">Fecha de Nacimiento</string>
-    <string name="Generp">Genero</string>
+    <string name="Genero">Genero</string>
     <string name="configurar_cta">Configura tu Cuenta</string>
     <string name="correo">Correo electronico</string>
     <string name="confirma_correo">Confirmar Correo electronico</string>
@@ -32,4 +35,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="titulo_ceunta">¡Bienvenido a Coink!</string>
     <string name="subtitulo_cuenta">¡Cuenta creada exitosamente, tu marrano ya está listo para que empieces a ahorrar!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
